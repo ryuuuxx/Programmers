@@ -1,3 +1,4 @@
+"""
 def solution(s):
     # 공백으로 문자열 구분
     s = s.split()
@@ -11,3 +12,14 @@ def solution(s):
             # Z가 아닐 경우 i에 해당되는 숫자 리스트 마지막에 추가(append)
             s_list.append(int(i))
     return sum(s_list)
+"""
+
+def solution(s):
+    s = s.split()
+    result = []  
+    for i in s:
+        if i != 'Z': 
+            result.append(int(i))
+        else: 
+            result.pop()
+    return sum(result)
